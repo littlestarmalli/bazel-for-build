@@ -3,6 +3,7 @@ bazel-bin/
 bazel-out/
 bazel-testlogs/
 bazel-genfiles/
+MODULE.bazel.lock
 
 # Bazel symlinks
 bazel-bazel-for-build
