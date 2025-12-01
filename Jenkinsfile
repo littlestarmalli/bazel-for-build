@@ -36,8 +36,8 @@ pipeline {
                         echo "Current Directory: $(pwd)"
                         echo "Python Version: $(python3 --version)"
                         echo "Bazel Version: $(bazel --version)"
-                        echo "Workspace Contents:"
-                        ls -la bazel-for-build/ 2>/dev/null || echo "bazel-for-build directory"
+                        echo "Repository Contents:"
+                        ls -la
                     '''
                 }
             }
@@ -47,17 +47,15 @@ pipeline {
             steps {
                 script {
                     echo "🔨 Starting Bazel build..."
-                    dir('bazel-for-build') {
-                        sh '''
-                            echo "================================"
-                            echo "BAZEL BUILD EXECUTOR"
-                            echo "================================"
-                            python3 build_executor.py
-                            echo "================================"
-                            echo "Build completed successfully"
-                            echo "================================"
-                        '''
-                    }
+                    sh '''
+                        echo "================================"
+                        echo "BAZEL BUILD EXECUTOR"
+                        echo "================================"
+                        python3 build_executor.py
+                        echo "================================"
+                        echo "Build completed successfully"
+                        echo "================================"
+                    '''
                 }
             }
         }
