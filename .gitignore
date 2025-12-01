@@ -1,0 +1,29 @@
+# Bazel build outputs and generated files
+bazel-bin/
+bazel-out/
+bazel-testlogs/
+bazel-genfiles/
+
+# Bazel symlinks
+bazel-bazel-for-build
+
+# Bazel lock file
+.bazellock
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# Dependencies
+node_modules/
