@@ -6,7 +6,6 @@ Compiles and runs the calculator binary using Bazel
 
 import subprocess
 import sys
-import os
 
 
 def run_command(cmd, description):
